@@ -1,0 +1,15 @@
+nocturne-os
+===========
+
+directory structure
+===================
+nocturne-os/
+  + oe-core/
+    + bitbake/
+    + meta/
+    + meta-*/
+    + build-<branch>/
+  + scritps/
+    + config.ini
+    + setup.py
+    + templateconf

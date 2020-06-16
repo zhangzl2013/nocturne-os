@@ -38,7 +38,7 @@ def checkout(directory, remote, branch, commit):
     os.chdir(directory)
 
     if shell("git diff-index --quiet HEAD --"):
-        branch_name = branch + '-' + commit[0:6]
+        branch_name = branch + '-' + commit[0:6] if commit else branch
         # if branch_name exists
         if shell("git branch --list {0} | grep --quiet {0}".format(branch_name)):
             shell("git checkout {}".format(branch_name))
